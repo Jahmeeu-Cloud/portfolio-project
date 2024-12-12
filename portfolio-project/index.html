@@ -106,10 +106,31 @@
         <div class="container">
             <h2>My Skills</h2>
             <div class="skills-grid">
-                <div class="skill">
-                    <h3>AWS</h3>
-                    <p>Expert in EC2, S3, VPC, Route 53, Lambda, IAM, and CloudFormation for building scalable cloud solutions.</p>
+                <div class="skill" style="padding: 20px; background: #f0f0f0; border-radius: 10px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.9); transition: transform 0.3s, box-shadow 0.3s;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: bold; color: #333;">AWS</h3>
+                    <p style="font-size: 1rem; color: #555; line-height: 1.5;">Expert in EC2, S3, VPC, Route 53, Lambda, IAM, and CloudFormation for building scalable cloud solutions.</p>
                 </div>
+                
+                <style>
+                /* Default style for the .skill container */
+                .skill {
+                    cursor: pointer;
+                    /* Adds a slight embossed shadow effect */
+                    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+                }
+                
+                /* Hover effect: Embossed and raised with dynamic shadow */
+                .skill:hover {
+                    transform: translateY(-10px); /* Makes the element "rise" */
+                    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3), -8px -8px 20px rgba(255, 255, 255, 0.8); /* Adds depth */
+                }
+                
+                /* Add smooth transition for a professional feel */
+                .skill {
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+                </style>
+                
                 <div class="skill">
                     <h3>Terraform</h3>
                     <p>Automating cloud infrastructure provisioning using Infrastructure-as-Code (IaC).</p>
