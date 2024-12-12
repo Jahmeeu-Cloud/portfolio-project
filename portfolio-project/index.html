@@ -151,48 +151,62 @@
         <div class="container">
             <h2>My Projects</h2>
             <div class="projects-grid">
-                <div class="project" style="padding: 20px; background: #f0f0f0; border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.9); transition: transform 0.3s, box-shadow 0.3s;">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: bold; color: #333;">Cloud Cost Optimization Tool</h3>
-                    <p style="font-size: 1rem; color: #555; line-height: 1.5;">An automated solution that helps businesses reduce cloud spending by identifying unused resources and optimizing configurations.</p>
-                    <a href="#" class="btn" style="display: inline-block; padding: 0.5rem 1.5rem; font-size: 1rem; font-weight: bold; color: #fff; background: #007BFF; border-radius: 25px; text-decoration: none; transition: background 0.3s;">View Project</a>
+                <div class="project">
+                    <h3>Cloud Cost Optimization Tool</h3>
+                    <p>An automated solution that helps businesses reduce cloud spending by identifying unused resources and optimizing configurations.</p>
+                    <a href="#" class="btn">View Project</a>
                 </div>
                 
                 <style>
-                /* Default style for the .project container */
+                /* Base styling for the project container */
                 .project {
-                    background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Subtle gradient for depth */
-                    cursor: pointer;
-                    text-align: center; /* Center align content */
-                }
-                
-                /* Hover effect: Embossed and rising */
-                .project:hover {
-                    transform: translateY(-10px); /* Element rises slightly */
-                    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3), -10px -10px 20px rgba(255, 255, 255, 0.8); /* Enhanced shadow for depth */
-                }
-                
-                /* Transition for smooth hover effect */
-                .project {
+                    padding: 20px;
+                    background: #f8f9fa; /* Light background for subtle contrast */
+                    border-radius: 15px;
+                    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.2), inset -3px -3px 6px rgba(255, 255, 255, 0.8); /* Embossed effect */
                     transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    text-align: center;
+                    cursor: pointer;
                 }
                 
-                /* Styling the button */
-                .project .btn {
-                    background: #007BFF; /* Blue background */
-                    border: none;
-                    padding: 0.5rem 1.5rem;
-                    border-radius: 25px;
-                    color: white;
+                /* Interactive hover effect */
+                .project:hover {
+                    transform: translateY(-8px); /* Slight rise */
+                    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.8); /* Raised shadow effect */
+                }
+                
+                /* Text styles */
+                .project h3 {
+                    font-size: 1.5rem;
+                    margin-bottom: 0.5rem;
                     font-weight: bold;
+                    color: #333;
+                }
+                
+                .project p {
+                    font-size: 1rem;
+                    color: #666;
+                    line-height: 1.5;
+                }
+                
+                /* Button styling */
+                .project .btn {
+                    display: inline-block;
+                    padding: 0.5rem 1.5rem;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    color: #fff;
+                    background: linear-gradient(145deg, #007BFF, #0056b3); /* Gradient background */
+                    border-radius: 25px;
                     text-decoration: none;
-                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.5); /* Embossed button */
+                    transition: background 0.3s ease, box-shadow 0.3s ease;
                 }
                 
                 /* Button hover effect */
                 .project .btn:hover {
-                    background: #0056b3; /* Darker blue for hover */
-                    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
-                    transition: background 0.3s ease, box-shadow 0.3s ease;
+                    background: linear-gradient(145deg, #0056b3, #003f7f); /* Darker gradient on hover */
+                    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.6); /* Slightly deeper shadow */
                 }
                 </style>
                 
