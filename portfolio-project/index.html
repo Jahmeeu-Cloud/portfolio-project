@@ -167,12 +167,7 @@
                     transition: transform 0.3s ease, box-shadow 0.3s ease;
                     text-align: center;
                     cursor: pointer;
-                }
-                
-                /* Interactive hover effect */
-                .project:hover {
-                    transform: translateY(-8px); /* Slight rise */
-                    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.8); /* Raised shadow effect */
+                    position: relative; /* Enables positioning of the button */
                 }
                 
                 /* Text styles */
@@ -201,6 +196,10 @@
                     text-decoration: none;
                     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.5); /* Embossed button */
                     transition: background 0.3s ease, box-shadow 0.3s ease;
+                    position: absolute; /* Position relative to the container */
+                    bottom: -168px; /* Push the button 7 inches below the container */
+                    left: 50%; /* Center the button horizontally */
+                    transform: translateX(-50%); /* Adjust to center */
                 }
                 
                 /* Button hover effect */
@@ -209,6 +208,7 @@
                     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.6); /* Slightly deeper shadow */
                 }
                 </style>
+                
                 
                 <div class="project">
                     <h3>CI/CD Pipeline for E-commerce App</h3>
