@@ -404,17 +404,19 @@
 
     <footer>
         <p>&copy; 2024 Horla. All rights reserved.</p>
-        <p>Unique Visitors: <span id="visitor-count">Loading...</span></p>
+        <p>Visitor Count: <span id="visitor-count">Loading...</span></p>
     </footer>
-    
+
     <script>
-        // Replace 'horla-portfolio' with a unique key for your site
-        const counterKey = 'horla-portfolio';
-    
-        // Increment the visitor count and fetch the current count
-        fetch(`https://api.countapi.xyz/hit/${counterKey}/visitors`)
+        // Define a unique namespace and key for the visitor count
+        const counterNamespace = 'horla-portfolio'; // Your unique namespace
+        const counterKey = 'visitors';
+
+        // Fetch visitor count and display it
+        fetch(`https://api.countapi.xyz/hit/${counterNamespace}/${counterKey}`)
             .then(response => response.json())
             .then(data => {
+                // Update the visitor count on the page
                 document.getElementById('visitor-count').textContent = data.value;
             })
             .catch(error => {
