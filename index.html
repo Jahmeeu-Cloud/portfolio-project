@@ -402,13 +402,29 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Horla. All rights reserved.</p>
-    </footer>
-
-    <a href='https://jahmeeu-cloud.github.io/portfolio-project/'>Horla Cloud</a> <script type='text/javascript' src='https://jahmeeu-cloud.github.io/portfolio-project/'></script>
+        <footer>
+            <p>&copy; 2024 Horla. All rights reserved.</p>
+            <p>Visitor Count: <span id="visitor-count">Loading...</span></p>
+        </footer>
+    
+        <script>
+            // Define a unique namespace and key for your counter
+            const namespace = 'horla-portfolio';
+            const key = 'visitors';
+    
+            // Fetch and increment the visitor count
+            fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Update the visitor count display
+                    document.getElementById('visitor-count').textContent = data.value;
+                })
+                .catch(error => {
+                    console.error('Error fetching visitor count:', error);
+                    document.getElementById('visitor-count').textContent = "Error";
+                });
+        </script>
    
-
     <script src="script.js"></script>
 </body>
 </html>
