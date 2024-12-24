@@ -404,7 +404,25 @@
 
     <footer>
         <p>&copy; 2024 Horla. All rights reserved.</p>
+        <p>Unique Visitors: <span id="visitor-count">Loading...</span></p>
     </footer>
+    
+    <script>
+        // Replace 'horla-portfolio' with a unique key for your site
+        const counterKey = 'horla-portfolio';
+    
+        // Increment the visitor count and fetch the current count
+        fetch(`https://api.countapi.xyz/hit/${counterKey}/visitors`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('visitor-count').textContent = data.value;
+            })
+            .catch(error => {
+                console.error('Error fetching visitor count:', error);
+                document.getElementById('visitor-count').textContent = "Error";
+            });
+    </script>
+   
 
     <script src="script.js"></script>
 </body>
