@@ -411,27 +411,32 @@
 
         <footer>
             <p>&copy; 2024 Horla. All rights reserved.</p>
-            <p>Visitor Count: <span id="visitor-count">Loading...</span></p>
-        </footer>
+
+            <p>You are visitor number:</p>
+        <div class="counter" id="visitorCount">Loading...</div>
     
         <script>
-            // Define a unique namespace and key for your counter
-            const namespace = 'horla-portfolio';
-            const key = 'visitors';
+            // Function to update and display the visitor count
+            function updateVisitorCount() {
+                const countKey = "visitorCount";
+                // Retrieve count from local storage or initialize to 0
+                let count = parseInt(localStorage.getItem(countKey)) || 0;
+               
+                // Increment the count
+                count++;
+               
+                // Save the updated count back to local storage
+                localStorage.setItem(countKey, count);
+               
+                // Display the count on the page
+                document.getElementById("visitorCount").textContent = count;
+            }
     
-            // Fetch and increment the visitor count
-            fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-                .then(response => response.json())
-                .then(data => {
-                    // Update the visitor count display
-                    document.getElementById('visitor-count').textContent = data.value;
-                })
-                .catch(error => {
-                    console.error('Error fetching visitor count:', error);
-                    document.getElementById('visitor-count').textContent = "Error";
-                });
+            // Call the function when the page loads
+            updateVisitorCount();
         </script>
-   
+        </footer>
+       
     <script src="script.js"></script>
 </body>
 </html>
